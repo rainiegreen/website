@@ -14,6 +14,7 @@ body {
 .preview-group{
 	margin-bottom: 50px;
 }
+
 .detail-photo,
 .detail-selection {
     padding: 0px;
@@ -26,6 +27,11 @@ body {
     -ms-flex-positive: 1;
     flex-grow: 1;
 }
+
+.preview-pic .tab-pane{
+	text-align: center;
+}
+
 .preview-thumbnail{
 	display: flex;
 	justify-content: center;
