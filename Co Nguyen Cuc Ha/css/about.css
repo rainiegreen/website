@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+.first-blk {
+    display: flex;
+}
+
+.cover-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.text-ctn {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 234px;
+}
+
+.main-text {
+    color: #4C665B;
+    font-weight: 700;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.main-text:before {
+    content : "";
+    position: absolute;
+    left    : 0;
+    top     : 0;
+    height  : 3px;
+    width   : 80px;  /* or 100px */
+    border-bottom:3px solid #4C665B;
+}
+.main-text:after {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : 0;
+    height  : 3px;
+    width   : 80px;  /* or 100px */
+    border-bottom:3px solid #4C665B;
+}
+
+.our-team-blk {
+    display: flex;
+}
+
+.who-we-are {
+    flex-basis: 30%;
+}
+
+.meet-our-team {
+    flex-basis: 70%;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.blk-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-person {
+    width: 100%;
+    height:250px;
+    object-fit: cover;
+}
+
+/* big screen*/
+@media (min-width: 1200px){
+	
+}
+/* Medium devices Desktops */
+@media (min-width: 992px) and (max-width: 1199px){
+	
+}
+/*tablet*/
+@media (min-width: 768px) and (max-width: 991px){
+    .first-blk {
+        flex-direction: column-reverse;
+    }
+
+    .text-ctn {
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-bottom: 30px;
+        width: 45%;
+    }
+
+    .who-we-are {
+        flex-basis: 40%;
+    }
+    
+    .meet-our-team {
+        flex-basis: 60%;
+    }
+
+}
+
+/* mobile*/
+@media (max-width: 767px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .first-blk {
+        flex-direction: column-reverse;
+    }
+
+    .text-ctn {
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-bottom: 30px;
+        width: 70%;
+    }
+
+    .our-team-blk {
+        flex-direction: column;
+    }
+
+    .who-we-are {
+        flex-basis: 0;
+        width: 35%;
+        margin-left: 60px;
+    }
+    
+    .meet-our-team {
+        flex-basis: 0;
+        margin-left: 0px;
+    }
+
+    .img-person {
+        height:600px;
+    }
+}

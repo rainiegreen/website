@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desserts - Beau'tea</title>
+    <!-- CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/desserts.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+	<link href="../../Co Nguyen Cuc Ha/css/common-rainie.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	
+	
+    <!-- Java -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+	<script>
+		 $(document).ready(function(){
+			 
+			 let $blackscreen = $('#blackscreen');
+			 let $mobileNavi = $('#mobile-navi');
+			 let $mobileSearch = $('#mobilesearch');
+			 let $searchBtn = $('.searchmobi');
+		 	$('#icon-threelines').click(function() {
+				if($mobileSearch.is(':visible')) {
+					$mobileSearch.slideUp();
+				} else {
+					$blackscreen.fadeToggle();
+				}
+				$mobileNavi.slideToggle();
+			})
+		 	$blackscreen.click(function(){
+				$mobileNavi.slideUp();	
+				$mobileSearch.slideUp();
+				$blackscreen.fadeOut();
+			})
+			 $searchBtn.click(function(){
+				 if ($mobileNavi.is(':visible')) {
+					$mobileNavi.slideUp();
+				 } else {
+					 $blackscreen.fadeToggle();
+				 }
+				$mobileSearch.slideToggle();
+			})
+			 
+			 let $subnav = $("#bgsubnav");
+			 
+			 function getVisible($el) {    
+				scrollTop = $(this).scrollTop(),
+				scrollBot = scrollTop + $(this).height(),
+				elTop = $el.offset().top,
+				elBottom = elTop + $el.outerHeight(),
+				visibleTop = elTop < scrollTop ? scrollTop : elTop,
+				visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+				return (visibleBottom - visibleTop);
+			}
+
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileNavi.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileSearch.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+		 }) 
+	 </script>
+	 <script>
+		 $(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+	 </script>
+	 
+	 
+	
+  </head>
+  <body>
+  
+  <!--HEADER-->
+  <div class="container-fluid" id="main-nav">
+	<div class="container">
+		<div class="row main-navi">
+			<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs logo">
+				<a href="../../Pham Thanh Hoa/html/_index.html">
+					<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+				</a>	
+			</div>
+			<div class="col-lg-offset-1 col-md-offset-1 hidden-xs nav_bar">
+				<a href="../../Pham Thanh Hoa/html/drinks.html" class="nav_link">DRINKS</a>
+				<a href="../../PHAN THU ANH/desserts/desserts.html" class="picked" >DESSERT</a>
+				<a href="../../Co Nguyen Cuc Ha/html/blog.html" class="nav_link">BLOG</a>
+				<a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="nav_link">ABOUT US</a>
+				<a href="../../PHAN THU ANH/desserts/contactus.html" class="nav_link">CONTACT</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- mobile navi -->
+
+<div class="container" id="mobile-navi">
+  <ul>
+    <li><a class="mobinav_link" href="../../Pham Thanh Hoa/index.html">HOME</a></li>
+    <li><a href="../../Pham Thanh Hoa/drinks.html" class="mobinav_link">DRINKS</a></li>
+	<li><a href="../../PHAN THU ANH/desserts/desserts.html" class="mobinav_link">DESSERT</a></li>
+	<li><a href="../../Co Nguyen Cuc Ha/html/blog.html" class="mobinav_link">BLOG</a></li>
+	<li><a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="mobinav_link">ABOUT US</a></li>
+	<li><a href="../../PHAN THU ANH/desserts/contactus.html" class="mobinav_link">CONTACT</a></li>
+  </ul>
+</div>
+
+<div class="container-fluid navbar sticky-top" id="main-navi">
+  <div class="container">
+    <div class="row row-mainnavi visible-xs-block">
+      	<div class="threelines col-xs-3"> <a id="icon-threelines"><span class="fa fa-bars"></span></a> 
+		</div>
+      <!--end icon 3lines-->
+		<div class="col-xs-6 logo_xs">
+			<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+		</div>
+	 </div>
+	</div>	
+</div>
+	
+  <!--BGBANNER-->
+  
+  
+  <!--BANNER-->
+	 <div class="container-fluid" id="bgbanner-descak">
+  	<img src="img/daltys-maxicoffee-21-partners-private-equity-france-coffee-and-croissant.jpg">
+  	</div>
+  	<!--END BANNER-->
+  
+  <div class="container-fluid" id="bgbanner">
+  	<div class="container">
+  			<h2>DELICIOUS CAKES AND PASTRY</h2>
+  		
+  	
+  		<div class="row">
+  			<div class="col-lg-10 col-lg-offset-1
+  		            col-md-10 col-md-offset-1
+  		            col-sm-10 col-sm-offset-1
+  		            col-xs-12 col-xs-offset-0 maincontent1" >
+  				<p class="content">At It’s Delicious, we know desserts should always be made from scratch, with love. Every cake, cupcake or confection that leaves our bakery is made with the finest natural ingredients using Pastry Chef Cristal Paredes’ exclusive recipes. For us, what we put into our cakes is just as important as what we leave out. Everything you’ll ever taste from It’s Delicious is made without the use of artificial flavors or pre-made mixes. We believe the best cakes in the world are as delicious as they are beautiful, but most importantly, they should be made just for you.</p>
+  			</div>
+  		</div>
+  	
+  		<div class="row">
+  			<hr class="linemot">
+  		</div>
+	</div>
+  	</div>
+   <!--END BGBANNER-->
+  
+  
+  <!--TWO DESSERTS-->
+  <div class="container-fluid" id="two-desserts">
+ 		<div class="container">
+  		<div class="row">
+  			<div class="col-lg-6
+  			            col-md-6
+  			            col-sm-12
+  			            col-xs-12" id="cakes1">
+  				<div class="col-lg-6
+  				            Col-md-6 
+  				            col-sm-6 
+  				            col-xs-12  hinhanh" >
+  					<img src="img/Fresh-Apple-Cake-101898375_0.jpg">
+  				</div>
+  				<div class="col-lg-6 
+  				            Col-md-6 
+  				            col-sm-6 
+  				            col-xs-12 contentnote">
+  					<h3>CAKES</h3>
+  					<p>Discover cake recipes from Beau'tea. You'll be tasted with cake recipes for layer cakes, mooncake and more!</p>
+  					<p>Enjoy on all day or bake them for a morning tea with friends and family this weekend! We can’t get over how simple and delicious these allergy-friendly scones are to make.</p>
+  					<button class="btnreadmore"><a href="dessertsCAKE.html" target="_blank">READ MORE</a></button>
+  				</div>
+  				
+  			
+  			</div>
+  			<div class="col-lg-6
+  			            col-md-6
+  			            col-sm-12
+  			            col-xs-12" id="pastry1">
+  				<div class="col-lg-6 
+  				            Col-md-6 
+  				            col-sm-6 
+  				            col-xs-12 hinhanh" >
+  					<img src="img/Fresh-Apple-Cake-101898375_02.jpg">
+  				</div>
+  				<div class="col-lg-6 
+  				            Col-md-6 
+  				            col-sm-6 
+  				            col-xs-12 contentnote">
+  					<h3>PASTRY</h3>
+  					<p>Choose from our delicious range of freshly pastry available for same day eat as well as pre delivery</p>
+  					<p>Our dedicated delivery angels bring our designs straight to your door in super speedy time, with cake delivery to a large amount of London postcodes for free.</p>
+  					<button class="btnreadmore"><a href="dessertsPASTRY.html" target="_blank">READ MORE</a></button>
+  				</div>
+  			</div>
+  		</div>
+  		
+  		<div class="row">
+  			<hr class="linemot">
+  	    </div>
+  	
+  	</div>
+  </div>
+  
+  <!--END TWO DESSERTS-->
+
+
+
+<div class="container-fluid" id="new-desserts">
+	<div class="container">
+		<div class="row">
+  			<h2>NEW DESSERTS</h2>
+  		</div>
+		</div>
+</div>
+
+
+<!--owl carousel-->
+	<div class="row you-may-like">
+        <h3 class="you-may-like-text">You may also be interested in the following product(s)</h3>
+        <div class="owl-carousel">
+          <div class="item"> <a> 
+			<img src="img/cheesecakedetail/owl carousel -beancheese.jpg" alt="product">	  
+            <div class="h5">Bean Cheese </div>
+            <div class="product-price"> £23.99 </div>
+            </a> </div>
+          <div class="item"> <a> <img src="img/cheesecakedetail/owl carousel -chicken.jpg" alt="product">
+            <div class="h5"> Chicken </div>
+            <div class="product-price"> £24.50 </div>
+            </a> </div>
+          <div class="item"> <a> <img src="img/cheesecakedetail/owl carousel -Barley Cereal.jpg" alt="product">
+            <div class="h5"> Barley Cereal  </div>
+            <div class="product-price"> £23.33 </div>
+            </a> </div>
+          <div class="item"> <a> <img src="img/cheesecakedetail/owl carousel -Matcha.jpg" alt="product">
+            <div class="h5"> Matcha</div>
+            <div class="product-price"> £24.50 </div>
+            </a> </div>
+          <div class="item"> <a> <img src="img/cheesecakedetail/owl carousel -pancake.jpg" alt="product">
+            <div class="h5">Pancake</div>
+            <div class="product-price"> £22.57 </div>
+            </a> </div>
+          <div class="item"> <a> <img src="img/cheesecakedetail/owl carousel -red velvet.jpg" alt="product">
+            <div class="h5"> Red Velvet </div>
+            <div class="product-price"> £20.85</div>
+            </a> </div>
+          <div class="item"> <a> <img src="img/cheesecakedetail/owl carousel -original.jpg" alt="product">
+            <div class="h5">Original</div>
+            <div class="product-price"> £18.00 </div>
+            </a> </div>
+          <div class="item"> <a> <img src="img/cheesecakedetail/owl carousel -apple crumble.jpg" alt="product">
+            <div class="h5"> Apple Crumble </div>
+            <div class="product-price"> £20.19 </div>
+            </a> </div>
+        </div>
+      </div>
+      <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+		  margin: 15,
+		  loop: true,
+		  touchDrag: true,
+		  nav: true,
+		  dots: false,
+		  autoplay: true,
+		  autoplayTimeout: 2500,
+		  autoplayHoverPause: true,
+		  smartSpeed: 1000,
+		  responsiveClass: true,
+		  responsive:{
+        		0:{
+            		items: 1,
+					center:true,
+            		nav:true
+        	},
+				600:{
+					items:3,
+            		nav:false
+        	},
+        		1000:{
+					items:5,
+            		nav:true
+            		
+        	}
+		  }
+		  
+      })
+    </script> <!--end owl carousel-->
+
+	
+	       
+	  
+<!---FOOTER-->
+  <div class="container">	
+	<div class="row">
+ 		 <hr id="hrfooter">
+ 	</div>
+  	<div class="row footer_logo">
+    		<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+	</div>	
+	<div class="row footer_text">
+      <p> COPYRIGHT 2019 - ALL RIGHT RESERVED, POWERED BY <b>BEAU'TEA</b></p>
+    </div>
+	<div class="row footer_socialnetwork">
+    	<a target="_blank" class="icon-social" href="https://www.facebook.com/rainiegreen">
+				<i class="icon-footer fab fa-facebook-f"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.instagram.com/rainiegreen/">
+				<i class="icon-footer fab fa-instagram"></i></a>
+        <a target="_blank" class="icon-social" href="https://twitter.com/rainiegreen">
+				<i class="icon-footer fab fa-twitter"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.youtube.com/rainiegreen2610"> 
+				<i class="icon-footer fab fa-youtube"></i></a>
+	</div>
+  </div>
+  
+  <!---END FOOTER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

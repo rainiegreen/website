@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+	font-family: mycontentfont;
+	src:url('../fonts/arapey-v8-latin-regular.eot'),
+		url('../fonts/arapey-v8-latin-regular.ttf'),
+		url(../fonts/arapey-v8-latin-regular.woff2),
+		url(../fonts/arapey-v8-latin-regular.woff);
+}
+
+@font-face{
+	font-family: bodyfont;
+	src:url('../fonts/poppins-v8-latin-regular.eot'),
+		url('../fonts/poppins-v8-latin-regular.ttf'),
+		url(../fonts/poppins-v8-latin-regular.woff),
+		url(../fonts/poppins-v8-latin-regular.woff2);
+	
+}
+
+h2{
+	font-family: mycontentfont;
+	color: #4c665b;
+	font-size: 48px;
+	/*background-color: pink;*/
+	text-align: center;
+	margin-bottom: 37px;
+}
+h3{
+	font-family: mycontentfont;
+	color: #4c665b;
+	font-size: 36px;
+	/*background-color: pink;*/
+}
+
+h5{
+	font-size: 18px;
+}
+
+#linecontact{
+	border-top: 5pt solid #4C665B;
+	text-align: center;
+}
+#forminforaddress{
+	padding: 0px;
+}
+.inforcontact{
+	margin-bottom: 74px;
+}
+
+.khoangcach{
+	padding:0px;
+}
+.contentcontact{
+	text-align: center;
+	padding: 0px;
+	/*background-color: #F3C3C4;*/
+}
+
+.tieudenho1{
+	margin-top: 0px;
+	margin-bottom: 15px;
+	
+}
+.tieude2{
+	margin-bottom: -5px;
+	font-family: bodyfont;
+	color: #4C665B;
+}
+.tieudenho4, .tieudenho3, .tieudenho1{
+	font-weight: bold;
+	font-family: bodyfont;
+}
+
+@media (min-width :1200px){
+	.tieude1{
+	margin-top: 37px;
+	margin-bottom: 37px;
+}
+	.tieudenho3{
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+	.tieudenho4{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	
+}
+	
+}
+@media (min-width: 992px)and (max-width : 1199px){
+	.tieude1{
+	margin-top: 37px;
+	margin-bottom: 37px;
+}
+	.tieudenho3{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-family: bodyfont;
+}
+	.tieudenho4{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-family: bodyfont;
+}
+	
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.tieude1{
+	margin-top: 37px;
+	margin-bottom: 37px;
+}
+	.tieudenho3{
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-family: bodyfont;
+}
+	.tieudenho4{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-family: bodyfont;
+}
+	
+}
+@media (max-width: 767px){
+	.tieude1{
+	margin-top: 37px;
+	margin-bottom: 37px;
+}
+	.tieudenho3{
+	margin-top: 20px;
+	font-family: bodyfont;
+	
+}
+	.tieudenho4{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-family: bodyfont;
+	
+}
+	
+	
+}
+
+
+
+textarea{
+	resize: none;
+	
+}
+.form-control{
+	border: 1px solid #4c665b;
+}
+.btn {
+  border: none;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  height: 35px;
+  width: 100px;
+}
+.send {
+	background-color: #4c665b;
+}
+.send:hover {
+	background-color: #4A7640;
+	color: white;
+}
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:40%; 
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+#bgmap{
+	padding: 0px;
+}
+.hrfooter{
+	margin-bottom: 0px;
+	border: 1px solid #4C665B;
+}
+#logofooter img{
+	height:auto;
+    width:100%;
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+b{
+	color: #31353D;
+}
+#social{
+	text-align: center;
+	margin-bottom: 30px;
+}
+#social i{
+	width: 10%;
+}
+#copyright{
+	/*background-color: #FFA068;*/
+	text-align: center;
+}
+
+
+
+
+

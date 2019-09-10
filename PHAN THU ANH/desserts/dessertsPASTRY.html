@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<link href="css/demo.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="../../Co Nguyen Cuc Ha/css/common-rainie.css" rel="stylesheet">
+	<script src="js/bootstrap.js"></script>
+	<script>
+		 $(document).ready(function(){
+			 
+			 let $blackscreen = $('#blackscreen');
+			 let $mobileNavi = $('#mobile-navi');
+			 let $mobileSearch = $('#mobilesearch');
+			 let $searchBtn = $('.searchmobi');
+		 	$('#icon-threelines').click(function() {
+				if($mobileSearch.is(':visible')) {
+					$mobileSearch.slideUp();
+				} else {
+					$blackscreen.fadeToggle();
+				}
+				$mobileNavi.slideToggle();
+			})
+		 	$blackscreen.click(function(){
+				$mobileNavi.slideUp();	
+				$mobileSearch.slideUp();
+				$blackscreen.fadeOut();
+			})
+			 $searchBtn.click(function(){
+				 if ($mobileNavi.is(':visible')) {
+					$mobileNavi.slideUp();
+				 } else {
+					 $blackscreen.fadeToggle();
+				 }
+				$mobileSearch.slideToggle();
+			})
+			 
+			 let $subnav = $("#bgsubnav");
+			 
+			 function getVisible($el) {    
+				scrollTop = $(this).scrollTop(),
+				scrollBot = scrollTop + $(this).height(),
+				elTop = $el.offset().top,
+				elBottom = elTop + $el.outerHeight(),
+				visibleTop = elTop < scrollTop ? scrollTop : elTop,
+				visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+				return (visibleBottom - visibleTop);
+			}
+
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileNavi.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileSearch.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+		 }) 
+	 </script>
+	<script>
+		$(document).ready(function(){
+        $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+			
+		$(".filter-button1").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });	
+			
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
+	</script>
+
+	
+  </head>
+  <body>
+  <!--HEADER-->
+
+<div class="container-fluid" id="main-nav">
+	<div class="container">
+		<div class="row main-navi">
+			<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs logo">
+				<a href="../../Pham Thanh Hoa/index.html">
+					<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+				</a>	
+			</div>
+			<div class="col-lg-offset-1 col-md-offset-1 hidden-xs nav_bar">
+				<a href="../../Pham Thanh Hoa/drinks.html" class="nav_link">DRINKS</a>
+				<a href="../../PHAN THU ANH/desserts/desserts.html" class="picked">DESSERT</a>
+				<a href="../../Co Nguyen Cuc Ha/html/blog.html" class="nav_link">BLOG</a>
+				<a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="nav_link">ABOUT US</a>
+				<a href="../../PHAN THU ANH/desserts/contact.html" class="nav_link">CONTACT</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--END HEADER-->
+
+<!-- mobile navi -->
+
+<div class="container" id="mobile-navi">
+  <ul>
+    <li><a class="mobinav_link" href="../../Pham Thanh Hoa/index.html">HOME</a></li>
+    <li><a href="../../Pham Thanh Hoa/drinks.html" class="mobinav_link">DRINKS</a></li>
+	<li><a href="../../PHAN THU ANH/desserts/desserts.html" class="mobinav_link">DESSERT</a></li>
+	<li><a href="../../Co Nguyen Cuc Ha/html/blog.html" class="mobinav_link">BLOG</a></li>
+	<li><a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="mobinav_link">ABOUT US</a></li>
+	<li><a href="../../PHAN THU ANH/desserts/contact.html" class="mobinav_link">CONTACT</a></li>
+  </ul>
+</div>
+
+<div class="container-fluid navbar sticky-top" id="main-navi">
+  <div class="container">
+    <div class="row row-mainnavi visible-xs-block">
+      	<div class="threelines col-xs-3"> <a id="icon-threelines"><span class="fa fa-bars"></span></a> 
+		</div>
+      <!--end icon 3lines-->
+		<div class="col-xs-6 logo_xs">
+			<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+		</div>
+	 </div>
+	</div>	
+</div>
+	
+	<!--BANNER-->
+	 <div class="container-fluid" id="bgbanner-descak">
+  	<img src="img/Categories-Banner-Whole-Cakes-compressor.jpg">
+  	</div>
+  	<!--END BANNER-->
+  
+  <!--PRODUCTLIST-->
+<div class="container-fluid" id="bgproductlist">
+ <div class="container">
+       <div class="row">
+  			<h2>PASTRY</h2>
+  		</div>
+  	
+  		<div class="row">
+  			<div class="col-lg-12 col-lg-offset-0
+  		            col-md-10 col-md-offset-1
+  		            col-sm-10 col-sm-offset-1
+  		            col-xs-12 col-xs-offset-0">
+				<p class="content">Discover cake recipes from Beau'tea. You'll be tasted with cake recipes for layer cakes, mooncake and more!</p>
+				<p class="content">Enjoy on a cozy winter's day or bake them for a morning tea with friends and family this weekend! We can’t get over how simple and delicious these allergy-friendly scones are to make.</p>
+  			</div>
+  		</div>
+  	
+	  <div class="row">
+        <div class="col-lg-12
+  	            	col-md-12
+  	            	col-xs-12
+  	            	col-sm-12" id="liskcake">
+            <button class="btn btn-default filter-button" data-filter="all">ALL</button>
+            <button class="btn btn-default filter-button" data-filter="namecheesecake">MACARON</button>
+            <button class="btn btn-default filter-button1" data-filter="croissant">CROISSANT</button>
+        </div>
+       
+	   </div>
+	 	<div class="row">
+  			<hr class="linemot">
+  		</div>
+	</div>
+	</div>
+<!--END PRODUCTLIST-->
+
+
+<!--LISTBANH-->
+		<div class="container-fluid" id="listbanh">
+  			<div class="container">
+  			<div class="row">
+  					<p class="namecakes filter namecheesecake ">Macaron</p>
+  				</div>
+  				<div class="row">
+            <div class="col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12  gallery_product filter namecheesecake">
+                    	<div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/le-macaron-chocolat.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/MACARON FRAMBOISES.jpg"/>
+							</figure>
+							</div>
+							<div class="product-infomacaron">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<a href="detailFRAMBOISES.html" target="_blank"><h5 class="namebanh">Framboises</h5></a>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;5.40</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>The Original has a very smooth texture but still has the denses cheesecake taste finished with vanilla</p>
+								  </div>
+							</div>
+            </div>
+            
+              <div class=" col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12 gallery_product filter namecheesecake">
+                           
+                <div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/le-macaron-matcha.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/le-macaron-matcha1.jpg"/>
+							</figure>
+							</div>
+							<div class="product-infomacaron">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<a href="detail1.html" target="_blank"><h5 class="namebanh">Matcha</h5></a>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;5.80</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>The blueberry cheesecake has a slight sour flavour with a beautiful deep blue/purple colour. </p>
+								  </div>
+							</div>
+            </div>
+            
+            <div class="col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12 gallery_product filter namecheesecake">
+                <div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/le-macaron-chocolatte.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/le-macaron-chocolat1.jpg"/>
+							</figure>
+							</div>
+							<div class="product-infomacaron">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<h5 class="namebanh">Chocolate </h5>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;5.80</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>Layered with original cheesecake and topped off with a traditional crumble.</p>
+								  </div>
+							</div>
+            </div>
+            
+               <div class="col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12 gallery_product filter namecheesecake">
+                <div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/le-macaron-orange.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/le-macaron-orange2.jpg"/>
+							</figure>
+							</div>
+							<div class="product-infomacaron">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<h5 class="namebanh">Parlour</h5>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;6.00</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>Red chocolate mud cake is covered with sweet and creamy cream cheese frosting</p>
+								  </div>
+							</div>
+            </div>
+				</div>
+           <div class="row">
+  			<hr class="linemot filter namecheesecake">
+  		   </div>
+          
+           <div class="row">
+  				<p class="namecakes filter croissant ">Croissant</p>
+  			</div>
+           
+            <div class="row">
+
+            <div class="col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12 gallery_product filter croissant">
+                 <div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/455656666.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/10155.jpg"/>
+							</figure>
+							</div>
+							<div class="product-info">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<a href="detailCROISANT.html" target="_blank"><h5 class="namebanh">Croissant</h5></a>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;4.30</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>Barley flakes has a very mild grain flavor, added some of the same chewiness in the topping.</p>
+								  </div>
+							</div>
+            </div>
+            
+             <div class=" col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12 gallery_product filter croissant">
+                <div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/232055111.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/232055.jpg"/>
+							</figure>
+							</div>
+							<div class="product-info">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<h5 class="namebanh">Pain au Raisins</h5>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;4.70</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>Cotija, a crumbly, aged white cheese, comes together with mashed kidney beans in this dish </p>
+								  </div>
+							</div>
+            </div>
+            
+              <div class="col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12 gallery_product filter croissant">
+       	             <div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/pain-au-chocolat-taste-test-good-housekeeping.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/232054.jpg"/>
+							</figure>
+							</div>
+							<div class="product-info">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<h5 class="namebanh">Pain au Chocolate</h5>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;4.70</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>The taste of the refreshing green tea, the usually oily and rich taste of croissant is well balanced. </p>
+								  </div>
+							</div>
+            </div>
+            
+            <div class=" col-lg-3 
+						col-md-3 
+						col-sm-6 
+						col-xs-12 gallery_product filter croissant">
+                         <div class="product-image">
+							  <figure class="swap-on-hover">
+								  <img  class="swap-on-hover__front-image" src="img/12169443435.jpg"/>
+								  <img class="swap-on-hover__back-image" src="img/121694.jpg"/>
+							</figure>
+							</div>
+							<div class="product-info">
+								<div class="col-lg-9
+								            col-md-8
+								            col-sm-9
+								            col-xs-9 cheesecake">
+									<h5 class="namebanh"> Apple Turnover</h5>
+								</div>
+								<div class="col-lg-3
+								            col-md-4
+								            col-sm-3
+								            col-xs-3 pound">
+									<button class="button money">&pound;5.50</button>
+								</div>
+							    
+								  <div class="col-lg-12
+								             col-md-12
+								             col-sm-12
+								             col-xs-12 noteproduct">
+									<p>The mooncake is filled with a mixture of spicy chicken floss, crushed almonds and walnuts, and sunflower seeds. </p>
+								  </div>
+							</div>
+            			</div>
+				</div>
+				
+			<div class="row">
+  				<hr class="linemot filter croissant">
+  		    </div>	
+			 </div>
+
+			</div>
+    
+<!--END LISTBANH-->
+	
+	
+ <!--FOOTER-->
+ <div class="container">	
+	<div class="row">
+ 		 <hr id="hrfooter">
+ 	</div>
+  	<div class="row footer_logo">
+    		<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+	</div>	
+	<div class="row footer_text">
+      <p> COPYRIGHT 2019 - ALL RIGHT RESERVED, POWERED BY <b>BEAU'TEA</b></p>
+    </div>
+	<div class="row footer_socialnetwork">
+    	<a target="_blank" class="icon-social" href="https://www.facebook.com/rainiegreen">
+				<i class="icon-footer fab fa-facebook-f"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.instagram.com/rainiegreen/">
+				<i class="icon-footer fab fa-instagram"></i></a>
+        <a target="_blank" class="icon-social" href="https://twitter.com/rainiegreen">
+				<i class="icon-footer fab fa-twitter"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.youtube.com/rainiegreen2610"> 
+				<i class="icon-footer fab fa-youtube"></i></a>
+	</div>
+	</div>
+	
+  
+
+	
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>

@@ -1,0 +1,153 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn {
+  border: none;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+  height: 35px;
+  width: 160px;
+}
+.cake {
+	background-color: #4c665b;
+}
+.cake:hover {
+	background-color: #46a049;
+}
+.button{
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 35px;
+  width: 72px;
+}
+
+.cheesecake, .pound{
+	padding-top: 37px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.money{
+	background-color: #4c665b;
+
+}
+.money:hover {
+	background-color: #46a049;
+}
+.lineproduct{
+	border: 1px solid black;
+}
+
+#liskcake{
+	text-align: center;
+	padding-bottom: 37px;
+	padding-top:  37px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+@media (max-width: 767px){
+	#liskcake{
+	padding-bottom: 37px;
+	padding-top:  37px;
+}
+	.cake {
+	background-color: #4c665b;
+	margin-top: 10px;
+}
+}
+
+.namecakes{
+	font-size: 36px;
+	font-family: bodyfont;
+	font-weight: bold;
+	color: #4C665B;
+	padding-top: 37px;
+	padding-bottom: 37px;
+	margin: 0px;
+}
+
+
+/*==Product-image==*/
+
+.product-image {
+    position: relative;
+}
+.product-image img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+    z-index: 9999;
+    transition: opacity .2s linear;
+    cursor: pointer;
+}
+.swap-on-hover:hover > .swap-on-hover__front-image{
+  opacity: 0;
+}
+.swap-on-hover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+.swap-on-hover {
+  position: relative;	
+	margin:  0 auto;
+	max-width: 400px;
+}
+/*==END Product-image==*/
+
+
+.product-info{
+	margin-top: 261px;
+}
+
+
+.noteproduct{
+	padding-top: 19px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.namebanh{
+	font-size: 18px;
+	font-family: bodyfont;
+	font-weight: bold;
+	padding-bottom: 19px;
+	border-bottom: 2px solid #4C665B;
+	border-bottom-width: 50%;
+	margin: 0px;
+}
+
+#bgheader, #listbanh{
+	padding: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

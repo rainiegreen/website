@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drinks - Beau'tea</title>
+
+<!--CSS-->
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/css/all.css" rel="stylesheet">
+<link href="../../Co Nguyen Cuc Ha/css/common-rainie.css" rel="stylesheet">
+<link href="../../Co Nguyen Cuc Ha/css/about.css" rel="stylesheet">
+<link rel="stylestrheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/drinks.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/owl.carousel.min.css">
+<link rel="stylesheet" href="../css/owl.theme.default.min.css">
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arapey&display=swap" rel="stylesheet">	
+	
+<!-- javascript -->
+   	<script src="../js/jquery.min.js"></script>
+   	<script src="../js/owl.carousel.min.js"></script>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script>
+		 $(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+	</script>
+<!--mobi navi --> 
+
+	<script>
+		 $(document).ready(function(){
+			 
+			 let $blackscreen = $('#blackscreen');
+			 let $mobileNavi = $('#mobile-navi');
+			 let $mobileSearch = $('#mobilesearch');
+			 let $searchBtn = $('.searchmobi');
+		 	$('#icon-threelines').click(function() {
+				if($mobileSearch.is(':visible')) {
+					$mobileSearch.slideUp();
+				} else {
+					$blackscreen.fadeToggle();
+				}
+				$mobileNavi.slideToggle();
+			})
+		 	$blackscreen.click(function(){
+				$mobileNavi.slideUp();	
+				$mobileSearch.slideUp();
+				$blackscreen.fadeOut();
+			})
+			 $searchBtn.click(function(){
+				 if ($mobileNavi.is(':visible')) {
+					$mobileNavi.slideUp();
+				 } else {
+					 $blackscreen.fadeToggle();
+				 }
+				$mobileSearch.slideToggle();
+			})
+			 
+			 let $subnav = $("#bgsubnav");
+			 
+			 function getVisible($el) {    
+				scrollTop = $(this).scrollTop(),
+				scrollBot = scrollTop + $(this).height(),
+				elTop = $el.offset().top,
+				elBottom = elTop + $el.outerHeight(),
+				visibleTop = elTop < scrollTop ? scrollTop : elTop,
+				visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+				return (visibleBottom - visibleTop);
+			}
+
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileNavi.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileSearch.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+		 }) 
+	 </script>
+</head>
+
+<body>
+	<div class="container-fluid" id="main-nav">
+		<div class="container">
+			<div class="row main-navi">
+				<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs logo">
+					<a href="_index.html">
+						<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+					</a>	
+				</div>
+				<div class="col-lg-offset-1 col-md-offset-1 hidden-xs nav_bar">
+					<a href="drinks.html" class="picked">DRINKS</a>
+					<a href="../../PHAN THU ANH/desserts/desserts.html" class="nav_link">DESSERT</a>
+					<a href="../../Co Nguyen Cuc Ha/html/blog.html" class="nav_link">BLOG</a>
+					<a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="nav_link">ABOUT US</a>
+					<a href="../../PHAN THU ANH/desserts/contact.html" class="nav_link">CONTACT</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- mobile navi -->
+
+	<div class="container" id="mobile-navi">
+	  <ul>
+		<li><a class="mobinav_link" href="_index.html">HOME</a></li>
+		<li><a href="drinks.html" class="mobinav_link">DRINKS</a></li>
+		<li><a href="../../PHAN THU ANH/desserts/desserts.html" class="mobinav_link">DESSERT</a></li>
+		<li><a href="../../Co Nguyen Cuc Ha/html/blog.html" class="mobinav_link">BLOG</a></li>
+		<li><a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="mobinav_link">ABOUT US</a></li>
+		<li><a href="../../PHAN THU ANH/desserts/contact.html" class="mobinav_link">CONTACT</a></li>
+	  </ul>
+	</div>
+
+	<div class="container-fluid navbar sticky-top" id="main-navi">
+	  <div class="container">
+		<div class="row row-mainnavi visible-xs-block">
+			<div class="threelines col-xs-3"> <a id="icon-threelines"><span class="fa fa-bars"></span></a> 
+			</div>
+		  <!--end icon 3lines-->
+			<div class="col-xs-6 logo_xs">
+				<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+			</div>
+		 </div>
+		</div>	
+	</div>
+
+<!--BANNER-->
+	<div class="container-fluid" id="bannerdr">
+		<img src="../img/How-to-Pair-Tea-with-Cheese.jpg">
+		<h2><b>DRINKS FOR HEALTH</b></h2>
+		<div class="row">
+			<div class="col-lg-offset-1 col-lg-10 col-lg-offset-1
+						col-md-offset-1 col-md-10 col-md-offset-1
+						col-sm-offset-1 col-sm-10 col-sm-offset-1
+						col-xs-12 text-center">
+				<p>
+					There’s more history to your afternoon chai than you might realize. From the ancient Egyptians to modern-day Japanese culture, tea has long been revered for its health-enhancing benefits.	
+				</p>
+				<p>
+					“For thousands of years tea has been an integral part of both culture and healing,” says Jennifer Hanway, a holistic nutritionist. Today, tea’s popularity holds strong. In fact, it’s the second most widely consumed beverage in the world, after water.
+				</p>
+				<hr>
+			</div>
+		</div>
+	</div>
+<!--Menu drinks-->
+	<div class="container" id="drinks">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 menubox">
+				<img src="../img/01.jpg" class="img-responsive">
+				<h2>HERBAL TEA</h2>
+				<p>Herbal tea isn’t derived from the specific kind of plant that typical teas are created from.</p>
+				<p>Drinking herbal tea allows you to reap all the plant’s benefits in a form that is easy to digest.</p>
+				<button class="btnexp"><a href="../../Co Nguyen Cuc Ha/html/herbal_tea.html" target="_blank">Explore Menu</a></button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 menubox">
+				<img src="../img/02.jpg" class="img-responsive">
+				<h2>FRUIT TEA</h2>
+				<p>Delicious hot or cold, our fruit and herbal teas are bursting with colour, life and flavour. Our fabulous range of infusions provides an easy little way to make you feel good. Naturally sugar-free, no caffeine and only 4 calories a cup. Perfect all day, every day.</p>
+				<button class="btnexp"><a href="fruit_tea.html" target="_blank">Explore Menu</a></button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 menubox">
+				<img src="../img/03.jpg" class="img-responsive">
+				<h2>MILK TEA</h2>
+				<p>Milk tea is, quite simply, tea with milk added. This creates a smoother flavor and slightly sweetens the tea. It's a popular way to serve tea in many parts of the world and it is an easy way to dress up your average cup of tea.</p>
+				<button class="btnexp"><a href="milk_tea.html" target="_blank">Explore Menu</a></button>
+			</div>
+		</div>
+		<div class="row">
+  			<hr>
+  	    </div>
+	</div>
+<!--New drinks-->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" id="newdrinks">
+  				NEW DRINKS
+  			</div><!--title-->
+		</div>
+	</div>
+<!--Owl carousel-->
+	<div class="row you-may-like">
+        <h3 class="you-may-like-text">You may also be interested in the following product(s)</h3>
+        <div class="owl-carousel">
+          <div class="item">
+          	<a> <img src="../img/owl/green-tea-with-lemon.jpg" alt="product">	  
+				<div class="h5"> Lemon Tea </div>
+				<div class="product-price"> £7.95 </div>
+            </a> </div>
+          <div class="item">
+          	<a> <img src="../img/owl/Lychee.jpg" alt="product">
+				<div class="h5"> Lychee Iced Tea </div>
+				<div class="product-price"> £6.95 </div>
+            </a> </div>
+          <div class="item">
+           	<a> <img src="../img/owl/Matcha-Milk-Tea.jpg" alt="product">
+				<div class="h5"> Matcha Milk Tea </div>
+				<div class="product-price"> £7.05 </div>
+            </a> </div>
+          <div class="item">
+          	<a> <img src="../img/owl/Jasmine-Tea.jpg" alt="product">
+				<div class="h5"> Jasmin Tea</div>
+				<div class="product-price"> £10.45 </div>
+            </a> </div>
+          <div class="item">
+          	<a> <img src="../img/owl/lavender-green-tea.jpg" alt="product">
+				<div class="h5"> Lavender Tea</div>
+				<div class="product-price"> £8.5 </div>
+            </a> </div>
+          <div class="item">
+           	<a> <img src="../img/owl/herbal-4a.jpg" alt="product">
+				<div class="h5"> Nilgiri Tea </div>
+				<div class="product-price"> £7.40 </div>
+            </a>
+           </div>
+          <div class="item">
+           	<a> <img src="../img/owl/rosehipstea.jpg" alt="product">
+				<div class="h5"> Rose Hips Tea</div>
+				<div class="product-price"> £9.25 </div>
+            </a> </div>
+          <div class="item">
+          	<a> <img src="../img/owl/Chrysanthemum Tea.jpg" alt="product">
+				<div class="h5"> Chrysanthemum Tea </div>
+				<div class="product-price"> £7.85 </div>
+            </a> </div>
+        </div>
+	</div>
+     <script>
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+		  margin: 15,
+		  loop: true,
+		  touchDrag: true,
+		  nav: true,
+		  dots: false,
+		  autoplay: true,
+		  autoplayTimeout: 2500,
+		  autoplayHoverPause: true,
+		  smartSpeed: 1000,
+		  responsiveClass: true,
+		  responsive:{
+        		0:{
+            		items: 1,
+					center:true,
+            		nav:true
+        	},
+				600:{
+					items:3,
+            		nav:false
+        	},
+        		1000:{
+					items:5,
+            		nav:true
+            		
+        	}
+		  }
+		  
+		  
+      })
+    </script> <!--end owl carousel-->
+
+<!--FOOTER-->
+ <div class="container">	
+	<div class="row">
+ 		 <hr id="hrfooter">
+ 	</div>
+  	<div class="row footer_logo">
+    		<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+	</div>	
+	<div class="row footer_text">
+      <p> COPYRIGHT 2019 - ALL RIGHT RESERVED, POWERED BY <b>BEAU'TEA</b></p>
+    </div>
+	<div class="row footer_socialnetwork">
+    	<a target="_blank" class="icon-social" href="https://www.facebook.com/rainiegreen">
+				<i class="icon-footer fab fa-facebook-f"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.instagram.com/rainiegreen/">
+				<i class="icon-footer fab fa-instagram"></i></a>
+        <a target="_blank" class="icon-social" href="https://twitter.com/rainiegreen">
+				<i class="icon-footer fab fa-twitter"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.youtube.com/rainiegreen2610"> 
+				<i class="icon-footer fab fa-youtube"></i></a>
+	</div>
+  </div>
+
+</body>
+</html>

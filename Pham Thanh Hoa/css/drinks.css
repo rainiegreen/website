@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+#bannerdr img{
+	width: 100%;
+	display: block;
+}
+#bannerdr h2,#newdrinks{
+	font-family: 'Arapey', serif;
+	color: #4C665B;
+	text-align: center;
+}
+#bannerdr hr, #drinks hr{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border: 1pt solid #4C665B;
+}
+.menubox{
+	margin-bottom: 30px;	
+}
+.menubox h2{
+	font-family: 'Arapey', serif;
+	color:#4C665B;
+	font-size: 36px;
+}
+#newdrinks{
+	margin-top: 30px;
+}
+/*=====================ONLY LARGE=====================*/
+@media(min-width:1200px){
+	#bannerdr h2, #newdrinks{
+		font-size: 48px;
+	}
+	#bannerdr hr, #drinks hr{
+		width: 550px;
+	}
+}
+/*=====================ONLY MEDIUM=====================*/	
+@media(min-width:992px) and (max-width:1199px){
+	#bannerdr h2, #newdrinks{
+		font-size: 48px;
+	}
+	#bannerdr hr, #drinks hr{
+		width: 550px;
+	}
+}
+/*=====================ONLY TABLET=====================*/	
+@media(min-width:768px) and (max-width:991px){
+	#bannerdr h2, #newdrinks{
+		font-size: 36px;
+	}
+	#bannerdr hr, #drinks hr{
+		width: 450px;
+	}
+}
+/*=====================ONLY MOBILE=====================*/
+@media(max-width:767px){
+	#bannerdr h2, #newdrinks{
+		font-size: 36px;
+	}
+	#bannerdr hr, #drinks hr{
+		width: 250px;
+	}
+}

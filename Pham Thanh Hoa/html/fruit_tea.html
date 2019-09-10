@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to Beau'tea</title>
+
+<!-- Bootstrap -->
+<link href="../../Co Nguyen Cuc Ha/css/bootstrap.css" rel="stylesheet">
+<link href="../../Co Nguyen Cuc Ha/css/all.css" rel="stylesheet">
+<link href="../../Co Nguyen Cuc Ha/css/common-rainie.css" rel="stylesheet">
+<link href="../../Co Nguyen Cuc Ha/css/about.css" rel="stylesheet">
+<link rel="stylestrheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/index.css" rel="stylesheet">
+<!--font-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arapey&display=swap" rel="stylesheet">	
+	
+<!-- javascript -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid" id="main-nav">
+	<div class="container">
+		<div class="row main-navi">
+			<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs logo">
+				<a href="../../Pham Thanh Hoa/index.html">
+					<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+				</a>	
+			</div>
+			<div class="col-lg-offset-1 col-md-offset-1 hidden-xs nav_bar">
+				<a href="../../Pham Thanh Hoa/drinks.html" class="nav_link">DRINKS</a>
+				<a href="../../PHAN THU ANH/desserts/desserts.html" class="nav_link">DESSERT</a>
+				<a href="../../Co Nguyen Cuc Ha/html/blog.html" class="nav_link">BLOG</a>
+				<a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="nav_link">ABOUT US</a>
+				<a href="../../PHAN THU ANH/desserts/contact.html" class="nav_link">CONTACT</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- mobile navi -->
+
+<div class="container" id="mobile-navi">
+  <ul>
+    <li><a class="mobinav_link" href="../../Pham Thanh Hoa/index.html">HOME</a></li>
+    <li><a href="../../Pham Thanh Hoa/drinks.html" class="mobinav_link">DRINKS</a></li>
+	<li><a href="../../PHAN THU ANH/desserts/desserts.html" class="mobinav_link">DESSERT</a></li>
+	<li><a href="../../Co Nguyen Cuc Ha/html/blog.html" class="mobinav_link">BLOG</a></li>
+	<li><a href="../../Co Nguyen Cuc Ha/html/aboutus.html" class="mobinav_link">ABOUT US</a></li>
+	<li><a href="../../PHAN THU ANH/desserts/contact.html" class="mobinav_link">CONTACT</a></li>
+  </ul>
+</div>
+
+<div class="container-fluid navbar sticky-top" id="main-navi">
+  <div class="container">
+    <div class="row row-mainnavi visible-xs-block">
+      	<div class="threelines col-xs-3"> <a id="icon-threelines"><span class="fa fa-bars"></span></a> 
+		</div>
+      <!--end icon 3lines-->
+		<div class="col-xs-6 logo_xs">
+			<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+		</div>
+	 </div>
+	</div>	
+</div>
+<!--FOOTER-->
+ <div class="container">	
+	<div class="row">
+ 		 <hr id="hrfooter">
+ 	</div>
+  	<div class="row footer_logo">
+    		<img src="../../Co Nguyen Cuc Ha/img/common/logo.png" alt="logo">
+	</div>	
+	<div class="row footer_text">
+      <p> COPYRIGHT 2019 - ALL RIGHT RESERVED, POWERED BY <b>BEAU'TEA</b></p>
+    </div>
+	<div class="row footer_socialnetwork">
+    	<a target="_blank" class="icon-social" href="https://www.facebook.com/rainiegreen">
+				<i class="icon-footer fab fa-facebook-f"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.instagram.com/rainiegreen/">
+				<i class="icon-footer fab fa-instagram"></i></a>
+        <a target="_blank" class="icon-social" href="https://twitter.com/rainiegreen">
+				<i class="icon-footer fab fa-twitter"></i></a>
+        <a target="_blank" class="icon-social" href="https://www.youtube.com/rainiegreen2610"> 
+				<i class="icon-footer fab fa-youtube"></i></a>
+	</div>
+  </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../js/jquery-3.2.1.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../../Co Nguyen Cuc Ha/js/bootstrap.js"></script>
+<script src="../../Co Nguyen Cuc Ha/popper.min.js"></script>
+<script src="../../Co Nguyen Cuc Ha/common.js"></script> 
+	<!--mobi navi --> 
+
+<script>
+		 $(document).ready(function(){
+			 
+			 let $blackscreen = $('#blackscreen');
+			 let $mobileNavi = $('#mobile-navi');
+			 let $mobileSearch = $('#mobilesearch');
+			 let $searchBtn = $('.searchmobi');
+		 	$('#icon-threelines').click(function() {
+				if($mobileSearch.is(':visible')) {
+					$mobileSearch.slideUp();
+				} else {
+					$blackscreen.fadeToggle();
+				}
+				$mobileNavi.slideToggle();
+			})
+		 	$blackscreen.click(function(){
+				$mobileNavi.slideUp();	
+				$mobileSearch.slideUp();
+				$blackscreen.fadeOut();
+			})
+			 $searchBtn.click(function(){
+				 if ($mobileNavi.is(':visible')) {
+					$mobileNavi.slideUp();
+				 } else {
+					 $blackscreen.fadeToggle();
+				 }
+				$mobileSearch.slideToggle();
+			})
+			 
+			 let $subnav = $("#bgsubnav");
+			 
+			 function getVisible($el) {    
+				scrollTop = $(this).scrollTop(),
+				scrollBot = scrollTop + $(this).height(),
+				elTop = $el.offset().top,
+				elBottom = elTop + $el.outerHeight(),
+				visibleTop = elTop < scrollTop ? scrollTop : elTop,
+				visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+				return (visibleBottom - visibleTop);
+			}
+
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileNavi.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+			 $(window).scroll(function() {
+  
+				let height = getVisible($subnav);
+		  
+ 				$mobileSearch.css("top", 100 + (height < 0 ? 0 : height));
+			});
+			 
+		 }) 
+	 </script>
+</body>
+</html>

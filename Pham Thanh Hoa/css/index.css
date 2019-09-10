@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+.cont_header{
+	font-size: 24px;
+	font-family: 'Arapey',serif;
+}
+.hr_cont{
+	width: 100px;
+	border: solid 1px #4c665b;
+	margin: 5px;
+}
+#cont02{
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	color: #fff;
+}
+#bgcont{
+	background-color: #4c665b;
+}
+#submit_01{
+	margin-top: 30px;
+	margin-bottom: 40px;
+	height: 35px;
+}
+#bgsubmit{
+	background-color:#ebfff9;
+	height: 35px;
+	font-size: 12px;
+	width: 270px;
+	border: none;
+	padding-left: 20px;
+	color: #f3fff9;
+}
+#submitbtn{
+	height: 35px;
+	width: 205px;
+	color: #363a42;
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	background-color: #cecece;
+	border: none;
+	margin-left: 30px;
+}
+#bestsel{
+	text-align: center;
+	font-family: 'Arapey',serif;
+}
+.hr_sel{
+	width: 100px;
+	border: solid 1px #4c665b;
+}
+#rowsel{
+	margin: 0px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+.selbox a{
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	text-decoration: none;
+	color: #4c665b;
+}
+.selbox img{
+	margin-bottom: 20px;
+}
+/*=====================ONLY LARGE=====================*/
+@media(min-width:1200px){
+	#bgcont{
+		height: 200px;
+		width: 100%;
+		font-size: 36px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-top: 50px;
+	}
+	#submitbtn{
+		margin-left: 30px;
+	}
+	#cont03{
+		margin-top: 40px;
+	}
+	#bestsel{
+		margin-top: 40px;
+		font-size: 48px;
+	}
+}
+
+
+/*=====================ONLY MEDIUM=====================*/	
+@media(min-width:992px) and (max-width:1199px){
+	#bgcont{
+		height: 200px;
+		width: 100%;
+		font-size: 36px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-top: 50px;
+	}
+	#submitbtn{
+		margin-left: 30px;
+	}
+	#cont03{
+		margin-top: 40px;
+	}
+	#bestsel{
+		margin-top: 40px;
+		font-size: 48px;
+	}
+}
+/*=====================ONLY TABLET=====================*/	
+@media(min-width:768px) and (max-width:991px){
+	#bgcont{
+		height: 190px;
+		width: 100%;
+		font-size: 36px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-top: 50px;
+	}
+	#submitbtn{
+		margin-left: 30px;
+	}
+	#cont03{
+		margin-top: 40px;
+	}
+	#bestsel{
+		margin-top: 40px;
+		font-size: 48px;
+	}
+}
+
+/*=====================ONLY MOBILE=====================*/
+@media(max-width:767px){
+	#bgcont{
+		height: 200px;
+		width: 100%;
+		font-size: 24px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		margin-top: 30px;
+	}
+	#submitbtn{
+		margin-top: 20px !important;
+		padding: 0px;
+		margin: 0px;
+	}
+	#cont03{
+		margin-top: 30px;
+	}
+	#cont03 img{
+		margin-top: 25px;
+	}
+	#bestsel{
+		margin-top: 30px;
+		font-size: 36px;
+	}
+}
